@@ -8,7 +8,7 @@ class RPS:
         self.valid_moves: list[str] = list(self.moves.keys())
 
     def play_game(self):
-        userMove: str = input('What\'s your move ?').lower()
+        userMove: str = input('What\'s your move ? \n').lower()
         AImove: str= random.choice(self.valid_moves)
 
         if userMove == 'exit':
