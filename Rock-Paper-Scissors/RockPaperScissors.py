@@ -3,7 +3,8 @@ import sys
 
 class RPS:
     def __init__(self):
-        print("Welcome To the Rock Paper Scissor Inator")
+        print("Welcome To the Rock Paper Scissor Inator") 
+        # Storing the Moves in a Dictionary
         self.moves: dict={'rock':'🪨','paper':'📃','scissors':'✂️'}
         self.valid_moves: list[str] = list(self.moves.keys())
 
@@ -15,6 +16,7 @@ class RPS:
             print('Thanks for Playing')
             sys.exit()
 
+        #condition to check the validity of the user's move
         if userMove not in self.valid_moves:
             print('Enter a Valid option')
             return self.play_game()
@@ -29,6 +31,7 @@ class RPS:
         print(f'AI used {self.moves[AImove]}')
     
     def checkMove(self,userMove,AImove):
+        # All Possible pairs
         if userMove == AImove:
             print('it\'s a Tie !')
         elif userMove == 'rock' and AImove == 'scissors':
