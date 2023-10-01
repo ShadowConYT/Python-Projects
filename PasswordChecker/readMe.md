@@ -1,8 +1,8 @@
 # Password Checker
 
-![GitHub last commit](https://img.shields.io/github/last-commit/ShadowConYT/password-checker)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/ShadowConYT/password-checker)
-![GitHub](https://img.shields.io/github/license/ShadowConYT/password-checker)
+![GitHub last commit](https://img.shields.io/github/last-commit/ShadowConYT/passwordChecker)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/ShadowConYT/passwordChecker)
+![GitHub](https://img.shields.io/github/license/ShadowConYT/passwordChecker)
 
 ## Overview
 
@@ -25,7 +25,7 @@ Welcome to the Password Checker! This simple Python script allows users to check
 2. Navigate to the project directory:
 
    ```shell
-   cd password-checker
+   cd passwordChecker
    ```
 
 3. Run the script:
