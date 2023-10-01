@@ -1,9 +1,5 @@
 # Password Checker
 
-![GitHub last commit](https://img.shields.io/github/last-commit/ShadowConYT/Beginner-Projects/PasswordChecker)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/ShadowConYT/Beginner-Projects/PasswordChecker)
-![GitHub](https://img.shields.io/github/license/ShadowConYT/Beginner-Projects/PasswordChecker)
-
 ## Overview
 
 Welcome to the Password Checker! This simple Python script allows users to check the uniqueness of a password they enter against a list of common passwords stored in a file. It's a useful tool to help users ensure that their chosen password is secure and not easily guessable.
