@@ -6,6 +6,11 @@ def passwordChecker(password: str):
         if password == common:
             print(f"{password}: ❌ (#{i})")
             return
+        
+        if password == '':
+            print("Password cannot be empty. please enter a vaild password")
+            main()
+            return
     
     print(f"{password}: ✅ (Unique)")
     return
