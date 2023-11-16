@@ -47,7 +47,13 @@ class TaxCalculator:
     def run(self):
         self.window.mainloop()
     
-    #def addSum(self):
+    def addSum(self):
+        try:
+            num1 = float(self.income_label_entry.get())
+            num2 = float(self.taxEntry.get())
+            self.update_result(num1 + num2)
+        except ValueError as e:
+            self.update_result("Invalid Input")
 
 
 if __name__ == "__main__":
