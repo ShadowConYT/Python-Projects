@@ -1,3 +1,4 @@
+# pip install customtkinter
 import customtkinter as ctk
 
 class TaxCalculator:
@@ -22,9 +23,9 @@ class TaxCalculator:
         self.taxEntry.grid(row=1,column=1, **self.padding)
         
         #options
-        self.optionmenu_var = ctk.StringVar(value="options")
+        self.optionmenu_var = ctk.StringVar(value="Options")
 
-        self.option = ctk.CTkOptionMenu(self.window,values=['10%', '20%', '30%'], command = self.taxOptions(), variable=self.optionmenu_var)
+        self.option = ctk.CTkOptionMenu(self.window,values=['10', '20', '30'], command = self.taxOptions, variable=self.optionmenu_var)
         self.option.grid(row=2, column=0, **self.padding)
 
         
@@ -40,10 +41,10 @@ class TaxCalculator:
         self.add = ctk.CTkButton(self.window, text='Calulate', command=self.calculate_tax)
         self.add.grid(row=4,column=1, **self.padding)
     
-    def taxOptions(self, taxPercent: int):
+    def taxOptions(self):
+        taxPercent = self.option.get()
         self.taxEntry.delete(0, ctk.END)
         self.taxEntry.insert(0, taxPercent)
-        
 
     def update_result(self, text: str):
         self.resultEntry.delete(0, ctk.END)
