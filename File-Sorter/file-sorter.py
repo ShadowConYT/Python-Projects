@@ -38,6 +38,8 @@ def main():
     if os.path.exists(user_input):
         sort_files(user_input)
         remove_empty_folders(user_input)
+
+        print(f'Files have been sorted Successfully! \n There were totally {len(next(os.walk(user_input))[1])} file structures \n {[dir for i, dir in enumerate(os.listdir(user_input))]}')
     else:
         print("The specified path does not exist.")
 
