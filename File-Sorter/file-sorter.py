@@ -15,7 +15,7 @@ def sort_files(source_path: str):
     
     for rootdir, subdir, filenames in os.walk(source_path):
         for filename in filenames:
-            file_path: str = os.path.join(rootdir, filename)
+            file_path: str = os.path.join(rootdir, filename) # rootDir/filname/file.ext
             extension: str = os.path.splitext(filename)[1]
 
             if extension:
