@@ -2,6 +2,7 @@ from difflib import get_close_matches
 import sys
 import json
 
+# For Reading Json Data
 def load_knowledge(path: str) -> dict:
     with open(path, 'r') as f:
         return json.load(f)
@@ -16,7 +17,8 @@ def closest_match(user_question: str, questions: dict) -> str | None:
 def chat_bot(knowledge: dict):
     user_input: str = input('You: ')
     if user_input.lower() == 'bye':
-        return f'Bot: Bye, see you later! {sys.exit(0)}'
+        sys.exit('Bot: Bye, see you later!')
+        
     
     best_match = closest_match(user_input, knowledge)
 
