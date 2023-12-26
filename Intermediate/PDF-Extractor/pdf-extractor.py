@@ -25,6 +25,7 @@ def word_count(txt: str):
 def main():
     extracted_text = pdf_extract('sample.pdf')
     word_counter = word_count(extracted_text)
+    print('Word Count')
 
     for word, mentions in word_counter.most_common(5):
         print(f'{word:10}: {mentions}')
