@@ -24,7 +24,7 @@ def track_habit(name, starttime, cost, minutes_used):
     days_to_go = round(goal - days)
 
     remaining_days = "Cleared" if days_to_go <= 0 else f'{days_to_go}'
-    time_since = f'{days} days' if days_to_go > 72 else f'{hours} hour'
+    time_since = f'{days} days' if days_to_go > 72 else f'{hours} hours'
 
     return Habit(name=name, 
                 time_since=time_since, 
