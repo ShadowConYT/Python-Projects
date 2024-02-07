@@ -5,7 +5,7 @@ import os
 load_dotenv()
 
 
-API_KEY = os.environ.get('API_KEY')
+API_KEY = os.environ.get('WEATHER_API_KEY')
 BASE_URL = 'https://pro.openweathermap.org/data/2.5/forecast'
 
 
