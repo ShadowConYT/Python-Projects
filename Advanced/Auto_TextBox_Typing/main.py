@@ -4,7 +4,6 @@ import speech_recognition as sr
 from pygetwindow import getActiveWindow
 from pywinauto import Desktop, findwindows
 
-
 # Function to get the active input field
 def get_active_input_field():
     try:
