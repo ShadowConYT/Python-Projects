@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import requests
 import json
 import os
+from model import Weather
 
 load_dotenv()
 
@@ -26,9 +27,14 @@ def get_weather(city, mock: bool = False):
 def main():
     city = input('Enter the city: ')
     weather_report = get_weather(city)
-    current = weather_report['current']
-    forecast_weather = weather_report['forecast']['forecastday'][0]['day']['condition']['text']
-    return f'The weather in {city} is {forecast_weather} with a temperature of {current["temp_c"]}°C'
+    weather = Weather(
+        date = weather_report['current']['last_updated'],
+        details = weather_report['current']['condition'],
+        temperature = weather_report['current']['temp_c'],
+        weather = weather_report['forecast']['forecastday'][0]['day']['condition'],
+        description = weather_report['forecast']['forecastday'][0]['day']['condition']['text']
+    )
+    return weather
 
 if __name__ == '__main__':
    print(main())
