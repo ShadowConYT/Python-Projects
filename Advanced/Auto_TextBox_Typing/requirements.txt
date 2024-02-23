@@ -1,7 +1,0 @@
-SpeechRecognition
-pyautogui
-PyGetWindow
-soundfile
-torch
-pywinauto
-PyAudio
