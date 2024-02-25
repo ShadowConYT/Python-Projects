@@ -47,7 +47,7 @@ while(cap.isOpened()):
         else:
             cv2.putText(img, "SAFE", (100, 100), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2, cv2.LINE_AA)
     cv2.imshow("Result", img)
-    k = cv2.waitKey(5) & 0xFF
+    k = cv2.waitKey(5) & 0xFF == ord('q')
     if k==27:
         break
 
