@@ -1,6 +1,7 @@
 import dlib
 import cv2
 import numpy as np
+import winsound
 
 def landmarks_to_np(landmarks, dtype="int"):
     num = landmarks.num_parts
@@ -43,12 +44,14 @@ while(cap.isOpened()):
         flag = int(d_judge<0.25)
         queue = queue[1:len(queue)] + [flag]
         if sum(queue) > len(queue)/2 :
+            # beep
+            winsound.Beep(500, 500)
             cv2.putText(img, "WARNING !", (100, 100), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2, cv2.LINE_AA)
         else:
             cv2.putText(img, "SAFE", (100, 100), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2, cv2.LINE_AA)
     cv2.imshow("Result", img)
-    k = cv2.waitKey(5) & 0xFF == ord('q')
-    if k==27:
+    
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
 cap.release()
