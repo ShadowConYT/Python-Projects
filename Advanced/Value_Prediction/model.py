@@ -9,4 +9,4 @@ class Prediction:
     mean_absolute_error: float
 
     def __str__(self):
-        return f"Prediction: {self.value:.2f} ({self.r2_score:.2%})"
+        return f"Prediction: {self.value:.2f} ({self.r2_score*100:.2f}%)"
