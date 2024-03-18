@@ -5,6 +5,6 @@ Intermediate/Crypto
 .env
 Advanced/Video-Generator-beta/testing
 projects
-Advanced/Auto_TextBox_Typing
+#Advanced/Auto_TextBox_Typing
 envv
 Advanced/Fatigue_detection_beta/shape_predictor_68_face_landmarks.dat
